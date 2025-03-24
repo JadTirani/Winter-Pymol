@@ -1,6 +1,9 @@
 import string
 from pymol import cmd, util
 
+def ASSERT(passthru_msg = "") :
+    print(">[Winter] - " + passthru_msg)
+
 # Cleans up the protien picture
 def STRIP_CLEAN(Tag="all") -> bool:
     cmd.select(Tag)
