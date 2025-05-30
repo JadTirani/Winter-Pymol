@@ -1,8 +1,18 @@
 import string
+from enum import Enum
 from pymol import cmd, util
 
+"""
+Winter's PYMOLRC
+This file contains a collection of functions to help with PYMOL scripting.
+"""
+
+@cmd.extend
 def ASSERT(passthru_msg = "") :
-    print(">[Winter] - " + passthru_msg)
+    """
+    Allows for debugging inside of the Winter suite of function
+    """
+    print(f"Winter>{passthru_msg}")
 
 # Cleans up the protien picture
 def STRIP_CLEAN(Tag="all") -> bool:
